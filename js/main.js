@@ -146,7 +146,8 @@ document.addEventListener('DOMContentLoaded', function () {
       item.className = 'gallery__item';
       item.setAttribute('aria-label', 'Ver fotografía ' + i + ' ampliada');
 
-      item.innerHTML = '<span class="gallery__placeholder">' + cameraIcon + '</span>';
+        item.innerHTML = '<span class="gallery__placeholder">' + cameraIcon + '</span>';
+        item.innerHTML = '<img src="assets/img/galeria/galery' + i + '.jpg" alt="Recuerdo ' + i + '">';
       // Para usar una foto real, reemplaza la línea anterior por:
       // item.innerHTML = '<img src="assets/img/foto' + i + '.jpg" alt="Recuerdo ' + i + '">';
 
