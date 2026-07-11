@@ -10,7 +10,7 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. VARIABLES DE DISEÑO — edita aquí para cambiar toda la paleta/tipos
+   1. VARIABLES DE DISEÑO — edita aquí para cambiar toda la paleta/tipos  PRUEBAAAAA
    ========================================================================== */
 :root{
   --bg-page:      #fdf1f1;   /* fondo detrás de la tarjeta, visible en desktop */
@@ -152,11 +152,11 @@ main{ position:relative; }
 
 /* ==========================================================================
    5. HERO
-   ========================================================================== */
+   ========================================================================== */ /*TEST*/
 .hero{ padding:0; }
 .hero__photo{
   position:relative;
-  aspect-ratio:4/5;
+  aspect-ratio:9/16;
   background:linear-gradient(150deg,var(--rose-soft),var(--surface) 55%,var(--gold-soft));
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
