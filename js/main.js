@@ -15,7 +15,7 @@ const CONFIG = {
   // Pega aquí el ID de tu playlist de Spotify para mostrar el reproductor.
   // Lo encuentras en el enlace para compartir: open.spotify.com/playlist/ESTE_ID
   // Ejemplo: spotifyPlaylistId: '37i9dQZF1DXcBWIGoYBM5M'
-  spotifyPlaylistId: ''
+    spotifyPlaylistId: '1sAVKbeZfl9IjAST4MNnYb?si=a8n6UuGnRl-qTxRo_A8yug'
 };
 
 document.addEventListener('DOMContentLoaded', function () {
