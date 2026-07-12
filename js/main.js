@@ -9,13 +9,13 @@
    CONFIGURACIÓN — edita estos valores para personalizar la invitación
    ========================================================================== */
 const CONFIG = {
-  eventDate: new Date('2026-11-14T19:00:00-04:00'),
+  eventDate: new Date('2026-08-08T20:00:00-04:00'),
   whatsappNumber: '59170000000', // formato internacional sin '+' ni espacios
   galleryCount: 6,
   // Pega aquí el ID de tu playlist de Spotify para mostrar el reproductor.
   // Lo encuentras en el enlace para compartir: open.spotify.com/playlist/ESTE_ID
   // Ejemplo: spotifyPlaylistId: '37i9dQZF1DXcBWIGoYBM5M'
-    spotifyPlaylistId: '1sAVKbeZfl9IjAST4MNnYb?si=a8n6UuGnRl-qTxRo_A8yug'
+  spotifyPlaylistId: '1sAVKbeZfl9IjAST4MNnYb?si=a8n6UuGnRl-qTxRo_A8yug'
 };
 
 document.addEventListener('DOMContentLoaded', function () {
