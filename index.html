@@ -40,196 +40,267 @@
 <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
 <div class="app-frame">
-<main id="contenido">
+    <main id="contenido">
 
-  <!-- ============ 1. PORTADA ============ -->
-  <header class="hero" aria-label="Portada de invitación">
-    <div class="hero__photo" style="background-image: url('assets/img/portadaxv.jpeg'); background-size: cover; background-position: center;">
-      <div class="hero__scrim"></div>
-      <div class="hero__badge" aria-hidden="true">C</div>
-      <div class="hero__caption">
-        <p class="hero__eyebrow">Mis quince años</p>
-        <h1 class="hero__name">Carla Nikol</h1>
-        <p class="hero__date-chip">8 de Agosto · 2026</p>
-      </div>
-    </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <span>Desliza para ver más</span>
-      <i class="hero__scroll-arrow"></i>
-    </div>
-  </header>
-
-  <!-- ============ 2/3. FECHA + CUENTA REGRESIVA ============ -->
-  <section class="section reveal" id="fecha" aria-labelledby="fecha-titulo">
-    <p class="eyebrow">Guarda la fecha</p>
-    <h2 class="section-title" id="fecha-titulo">Un día para <em>recordar</em></h2>
-
-    <div class="card card--soft">
-      <p class="date-card__day">Sábado 8 de Agosto</p>
-      <p class="date-card__full">2026 · 20:00 hrs · Salón de Eventos Neidy Rossiel</p>
-
-      <div class="countdown" id="countdown" aria-live="polite">
-        <div class="countdown__unit"><div class="countdown__num" id="cd-days">00</div><div class="countdown__label">Días</div></div>
-        <div class="countdown__unit"><div class="countdown__num" id="cd-hours">00</div><div class="countdown__label">Horas</div></div>
-        <div class="countdown__unit"><div class="countdown__num" id="cd-mins">00</div><div class="countdown__label">Min</div></div>
-        <div class="countdown__unit"><div class="countdown__num" id="cd-secs">00</div><div class="countdown__label">Seg</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 5. MENSAJE DE BIENVENIDA ============ -->
-  <section class="section reveal" aria-labelledby="bienvenida-titulo">
-    <p class="eyebrow">Con cariño</p>
-    <h2 class="section-title" id="bienvenida-titulo">Mi historia</h2>
-    <p class="welcome__text">Con la bendición de Dios y el amor de mis padres, Carlos y Nieves, hoy cumplo un sueño: compartir este momento tan especial con las personas que más quiero. Gracias por ser parte de mi historia y por acompañarme a escribir este nuevo capítulo.</p>
-    <p class="welcome__signature">Carla Nikol</p>
-  </section>
-
-  <!-- ============ PLAYLIST ============ -->
-  <section class="section reveal" id="playlist" aria-labelledby="playlist-titulo">
-    <p class="eyebrow">Ambiente</p>
-    <h2 class="section-title" id="playlist-titulo">La <em>playlist</em> de la fiesta</h2>
-    <p class="lede" style="margin-bottom:1.6rem;">Ayúdame a armar el ambiente perfecto: escucha lo que sonará esa noche y, si quieres, agrega tus propias sugerencias.</p>
-
-    <div class="card card--soft" id="playlistCard">
-      <!-- Si CONFIG.spotifyPlaylistId está configurado en js/main.js, aquí se
-           inserta automáticamente el reproductor embebido de Spotify.
-           Mientras tanto se muestra un estado vacío con instrucciones. -->
-    </div>
-  </section>
-
-  <!-- ============ 6. GALERÍA ============ -->
-  <section class="section section--wide reveal" aria-labelledby="galeria-titulo">
-    <p class="eyebrow">Recuerdos</p>
-    <h2 class="section-title" id="galeria-titulo">Antes de los <em>15</em></h2>
-    <!----<p class="lede" style="margin-bottom:1.6rem;">Reemplaza estos espacios con tus propias fotografías favoritas.</p> -->
-    <div class="gallery" id="gallery">
-      <!-- Los espacios de la galería se generan en js/main.js -->
-      <!-- Para usar fotos reales: coloca los archivos en assets/img/ y sigue las
-           instrucciones dentro de js/main.js, sección "GALERÍA" -->
-    </div>
-  </section>
-
-  <!-- ============ 7. CEREMONIA Y RECEPCIÓN ============ -->
-  <section class="section reveal" aria-labelledby="eventos-titulo">
-    <p class="eyebrow">El gran día</p>
-    <h2 class="section-title" id="eventos-titulo">Ceremonia y <em>recepción</em></h2>
-    <div class="timeline">
-
-        <div class="card timeline__card">
-            <div class="timeline__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V9l8-6 8 6v12" /><path d="M9 21v-6h6v6" /></svg>
+        <!-- ============ 1. PORTADA ============ -->
+        <header class="hero" aria-label="Portada de invitación">
+            <div class="hero__photo" style="background-image: url('assets/img/portadaxv.jpeg'); background-size: cover; background-position: center;">
+                <div class="hero__scrim"></div>
+                <div class="hero__badge" aria-hidden="true">C</div>
+                <div class="hero__caption">
+                    <p class="hero__eyebrow">Mis quince años</p>
+                    <h1 class="hero__name">Carla Nikol</h1>
+                    <p class="hero__date-chip">8 de Agosto · 2026</p>
+                </div>
             </div>
-            <div>
-                <p class="timeline__time">20:00 hrs</p>
-                <p class="timeline__title">Recepción y Fiesta</p>
-                <p class="timeline__place">Salón de Eventos Neidy Rossiel<br>Av. 3 pasos al frente y Av. 16 de julio</p>
+            <div class="hero__scroll" aria-hidden="true">
+                <span>Desliza para ver más</span>
+                <i class="hero__scroll-arrow"></i>
             </div>
-        </div>
-        <div class="card timeline__card">
-            <div class="timeline__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M6 22h12M8 8h8l2 6H6l2-6z" /><path d="M6 14h12v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3z" /></svg>
+        </header>
+
+        <!-- ============ MÚSICA DE FONDO ============ -->
+        <section class="section reveal" id="musica" aria-labelledby="musica-titulo">
+            <p class="eyebrow">Ambiente</p>
+            <h2 class="section-title" id="musica-titulo">Activa la <em>música</em></h2>
+
+            <div class="card card--soft music-card">
+                <button type="button" class="music-disc" id="musicToggle" aria-pressed="false" aria-label="Reproducir música de la invitación">
+                    <span class="music-disc__ring"></span>
+                    <svg class="music-disc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path d="M9 18V5l12-2v13" />
+                        <circle cx="6" cy="18" r="3" />
+                        <circle cx="18" cy="16" r="3" />
+                    </svg>
+                </button>
+                <p class="music-card__label" id="musicLabel">Toca para reproducir</p>
             </div>
-            <div>
-                <p class="timeline__time">21:00 hrs</p>
-                <p class="timeline__title">Ingreso de Carla Nikol</p>
-                <!--<p class="timeline__place">Parroquia San Ignacio de Loyola<br>Av. San Martín, Santa Cruz de la Sierra</p>-->
+
+            <audio id="bgMusic" loop preload="none">
+                <source src="assets/audio/sonido-fondo.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <!-- ============ 2/3. FECHA + CUENTA REGRESIVA ============ -->
+        <section class="section reveal" id="fecha" aria-labelledby="fecha-titulo">
+            <p class="eyebrow">Guarda la fecha</p>
+            <h2 class="section-title" id="fecha-titulo">Un día para <em>recordar</em></h2>
+
+            <div class="card card--soft">
+                <p class="date-card__day">Sábado 8 de Agosto</p>
+                <p class="date-card__full">2026 · 20:00 hrs · Salón de Eventos Neidy Rossiel</p>
+
+                <div class="countdown" id="countdown" aria-live="polite">
+                    <div class="countdown__unit"><div class="countdown__num" id="cd-days">00</div><div class="countdown__label">Días</div></div>
+                    <div class="countdown__unit"><div class="countdown__num" id="cd-hours">00</div><div class="countdown__label">Horas</div></div>
+                    <div class="countdown__unit"><div class="countdown__num" id="cd-mins">00</div><div class="countdown__label">Min</div></div>
+                    <div class="countdown__unit"><div class="countdown__num" id="cd-secs">00</div><div class="countdown__label">Seg</div></div>
+                </div>
             </div>
-        </div>
-        <div class="card timeline__card">
-            <div class="timeline__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M6 22h12M8 8h8l2 6H6l2-6z" /><path d="M6 14h12v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3z" /></svg>
+        </section>
+
+        <!-- ============ 5. MENSAJE DE BIENVENIDA ============ -->
+        <section class="section reveal" aria-labelledby="bienvenida-titulo">
+            <p class="eyebrow">Con cariño</p>
+            <h2 class="section-title" id="bienvenida-titulo">Mi historia</h2>
+            <p class="welcome__text">Con la bendición de Dios y el amor de mis padres, Carlos y Nieves, hoy cumplo un sueño: compartir este momento tan especial con las personas que más quiero. Gracias por ser parte de mi historia y por acompañarme a escribir este nuevo capítulo.</p>
+            <p class="welcome__signature">Carla Nikol</p>
+        </section>
+
+        <!-- ============ PLAYLIST ============ -->
+        <!--<section class="section reveal" id="playlist" aria-labelledby="playlist-titulo">
+            <p class="eyebrow">Ambiente</p>
+            <h2 class="section-title" id="playlist-titulo">La <em>playlist</em> de la fiesta</h2>-->
+            <!--  <p class="lede" style="margin-bottom:1.6rem;">Ayúdame a armar el ambiente perfecto: escucha lo que sonará esa noche y, si quieres, agrega tus propias sugerencias.</p> -->
+
+            <!--<div class="card card--soft" id="playlistCard">-->
+                <!-- Si CONFIG.spotifyPlaylistId está configurado en js/main.js, aquí se
+                 inserta automáticamente el reproductor embebido de Spotify.
+                 Mientras tanto se muestra un estado vacío con instrucciones. -->
+            <!--</div>
+        </section>-->
+
+        <!-- ============ 6. GALERÍA ============ -->
+        <section class="section section--wide reveal" aria-labelledby="galeria-titulo">
+            <p class="eyebrow">Recuerdos</p>
+            <h2 class="section-title" id="galeria-titulo">Antes de los <em>15</em></h2>
+            <!----<p class="lede" style="margin-bottom:1.6rem;">Reemplaza estos espacios con tus propias fotografías favoritas.</p> -->
+            <div class="gallery" id="gallery">
+                <!-- Los espacios de la galería se generan en js/main.js -->
+                <!-- Para usar fotos reales: coloca los archivos en assets/img/ y sigue las
+                 instrucciones dentro de js/main.js, sección "GALERÍA" -->
             </div>
-            <div>
-                <p class="timeline__time">21:30 hrs</p>
-                <p class="timeline__title">Baile del Vals</p>              
+        </section>
+
+        <!-- ============ 7. CEREMONIA Y RECEPCIÓN ============ -->
+        <section class="section reveal" aria-labelledby="eventos-titulo">
+            <p class="eyebrow">El gran día</p>
+            <h2 class="section-title" id="eventos-titulo">Ceremonia y <em>recepción</em></h2>
+            <div class="timeline">
+                <!--RECEPCION-->
+                <div class="card timeline__card">
+                    <div class="timeline__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V9l8-6 8 6v12" /><path d="M9 21v-6h6v6" /></svg>
+                    </div>
+                    <div>
+                        <p class="timeline__time">20:00 hrs</p>
+                        <p class="timeline__title">Recepción</p>
+                        <p class="timeline__place">Salón de Eventos Neidy Rossiel<br>Av. 3 pasos al frente y Av. 16 de julio</p>
+                    </div>
+                </div>
+                <!--INGRESO DE QUINCEANEA-->
+                <div class="card timeline__card">
+                    <div class="timeline__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 18l2-8 5 4 2-8 2 8 5-4 2 8H3z" />
+                            <path d="M5 18h14v3H5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="timeline__time">22:00 hrs</p>
+                        <p class="timeline__title">Ingreso de Carla Nikol</p>
+                        <!--<p class="timeline__place">Parroquia San Ignacio de Loyola<br>Av. San Martín, Santa Cruz de la Sierra</p>-->
+                    </div>
+                </div>
+                <!--BAILE DEL VALS-->
+                <div class="card timeline__card">
+                    <div class="timeline__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="5" r="2" />
+                            <circle cx="15" cy="5" r="2" />
+                            <path d="M9 7l-2 4 2 2" />
+                            <path d="M15 7l2 4-2 2" />
+                            <path d="M9 9l3 2 3-2" />
+                            <path d="M7 13l-2 6" />
+                            <path d="M17 13l2 6" />
+                            <path d="M12 11v8" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="timeline__time">22:30 hrs</p>
+                        <p class="timeline__title">Baile del Vals</p>
+                    </div>
+                </div>
+                <!--BRINDIS-->
+                <div class="card timeline__card">
+                    <div class="timeline__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 3v4a4 4 0 0 0 8 0V3" />
+                            <path d="M12 11v5" />
+                            <path d="M9 21h6" />
+                            <path d="M10 16h4" />
+                            <path d="M4 4l6 6" />
+                            <path d="M20 4l-6 6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="timeline__time">23:00 hrs</p>
+                        <p class="timeline__title">Brindis</p>
+                    </div>
+                </div>
+                <!--CENA-->
+                <div class="card timeline__card">
+                    <div class="timeline__icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <path d="M4 3v7" />
+                            <path d="M2.5 3v4" />
+                            <path d="M5.5 3v4" />
+                            <path d="M18 3v7" />
+                            <path d="M20 3v7" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="timeline__time">23:30 hrs</p>
+                        <p class="timeline__title">Cena</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- ============ 8. MAPA ============ -->
-  <section class="section reveal" aria-labelledby="mapa-titulo">
-    <p class="eyebrow">Cómo llegar</p>
-    <h2 class="section-title" id="mapa-titulo">Ubicación</h2>
-    <div class="map-frame">
-      <iframe
-        src="https://www.google.com/maps?q=Salón+de+Eventos+Neidy+Rossiel,+Av.+3+pasos+al+frente+y+Av.+16+de+julio,+Santa+Cruz+de+la+Sierra,+Bolivia&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Mapa de ubicación de Salón de Eventos Neidy Rossiel">
-      </iframe>
-    </div>
-    <div class="map-cta">
-      <a class="btn btn--ghost" href="https://maps.app.goo.gl/" target="_blank" rel="noopener">
-        Ver en Google Maps
-      </a>
-    </div>
-  </section>
+        <!-- ============ 8. MAPA ============ -->
+        <section class="section reveal" aria-labelledby="mapa-titulo">
+            <p class="eyebrow">Cómo llegar</p>
+            <h2 class="section-title" id="mapa-titulo">Ubicación</h2>
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps?q=Salón+de+Eventos+Neidy+Rossiel,+Av.+3+pasos+al+frente+y+Av.+16+de+julio,+Santa+Cruz+de+la+Sierra,+Bolivia&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de Salón de Eventos Neidy Rossiel">
+                </iframe>
+            </div>
+            <div class="map-cta">
+                <a class="btn btn--ghost" href="https://maps.app.goo.gl/iATzKawiY4sQaq347" target="_blank" rel="noopener">
+                    Ver en Google Maps
+                </a>
+            </div>
+        </section>
 
-  <!-- ============ 9. CÓDIGO DE VESTIMENTA ============ -->
-  <section class="section reveal" aria-labelledby="vestimenta-titulo">
-    <p class="eyebrow">Código de vestimenta</p>
-    <h2 class="section-title" id="vestimenta-titulo">Etiqueta <em>formal</em></h2>
-    <div class="dresscode">
-      <span class="dresscode__badge">Formal</span>
-      <div class="swatches" aria-hidden="true">
-        <span class="swatch" style="background:#33232A"></span>
-        <span class="swatch" style="background:#C39A52"></span>
-        <span class="swatch" style="background:#C98A9B"></span>
-        <span class="swatch" style="background:#FBF2EF;border-color:#E3D3CE"></span>
-      </div>
-      <p class="dresscode__note">Se sugiere evitar los colores rosa palo y dorado, reservados para la quinceañera.</p>
-    </div>
-  </section>
+        <!-- ============ 9. CÓDIGO DE VESTIMENTA ============ -->
+        <section class="section reveal" aria-labelledby="vestimenta-titulo">
+            <p class="eyebrow">Código de vestimenta</p>
+            <h2 class="section-title" id="vestimenta-titulo">Etiqueta <em>semiformal</em></h2>
+            <div class="dresscode">
+                <span class="dresscode__badge">Semiformal</span>
+                <div class="swatches" aria-hidden="true">
+                    <span class="swatch" style="background:#33232A"></span>
+                    <span class="swatch" style="background:#C39A52"></span>
+                    <span class="swatch" style="background:#C98A9B"></span>
+                    <span class="swatch" style="background:#FBF2EF;border-color:#E3D3CE"></span>
+                </div>
+                <p class="dresscode__note">Se sugiere evitar los colores rosa palo y dorado, reservados para la quinceañera.</p>
+            </div>
+        </section>
 
-  <!-- ============ 10. CONFIRMACIÓN POR WHATSAPP ============ -->
-  <section class="section reveal" id="rsvp" aria-labelledby="rsvp-titulo">
-    <p class="eyebrow">Confirma tu asistencia</p>
-    <h2 class="section-title" id="rsvp-titulo">Cuento contigo</h2>
-    <p class="lede" style="margin-bottom:1.6rem;">Tu presencia hace que este día sea aún más especial. Confírmame antes del 1 de agosto.</p>
+        <!-- ============ 10. CONFIRMACIÓN POR WHATSAPP ============ -->
+        <section class="section reveal" id="rsvp" aria-labelledby="rsvp-titulo">
+            <p class="eyebrow">Confirma tu asistencia</p>
+            <h2 class="section-title" id="rsvp-titulo">Cuento contigo</h2>
+            <p class="lede" style="margin-bottom:1.6rem;">Tu presencia hace que este día sea aún más especial. Confírmame antes del 1 de agosto.</p>
 
-    <form class="card rsvp-card" id="rsvpForm">
-      <div class="field">
-        <label for="rsvpName">Tu nombre completo</label>
-        <input type="text" id="rsvpName" name="rsvpName" placeholder="Escribe tu nombre" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="rsvpGuests">Número de acompañantes</label>
-        <select id="rsvpGuests" name="rsvpGuests">
-          <option value="0">Solo yo</option>
-          <option value="1">1 acompañante</option>
-          <option value="2">2 acompañantes</option>
-          <option value="3">3 acompañantes</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn--whatsapp">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2 .1.2.1.4 0 .6-.6 1.2-1.2 1.1-.7 1.9 1 1.7 1.9 2.3 3.4 3 .3.1.5.1.6-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg>
-        Confirmar por WhatsApp
-      </button>
-    </form>
-  </section>
+            <form class="card rsvp-card" id="rsvpForm">
+                <div class="field">
+                    <label for="rsvpName">Tu nombre completo</label>
+                    <input type="text" id="rsvpName" name="rsvpName" placeholder="Escribe tu nombre" required autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="rsvpGuests">Número de acompañantes</label>
+                    <select id="rsvpGuests" name="rsvpGuests">
+                        <option value="0">Solo yo</option>
+                        <option value="1">1 acompañante</option>
+                        <option value="2">2 acompañantes</option>
+                        <option value="3">3 acompañantes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn--whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2 .1.2.1.4 0 .6-.6 1.2-1.2 1.1-.7 1.9 1 1.7 1.9 2.3 3.4 3 .3.1.5.1.6-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.3z" /></svg>
+                    Confirmar por WhatsApp
+                </button>
+            </form>
+        </section>
 
-  <!-- ============ 11. MESA DE REGALOS ============ -->
-  <section class="section reveal" aria-labelledby="regalos-titulo">
-    <p class="eyebrow">Mesa de regalos</p>
-    <h2 class="section-title" id="regalos-titulo">Un detalle <em>opcional</em></h2>
-    <div class="card">
-      <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7c-1.5-3.5-6-4-6-1s3 2 6 1zM12 7c1.5-3.5 6-4 6-1s-3 2-6 1z"/></svg>
-      <p class="lede">Tu cariño y compañía son el mejor regalo. Si deseas tener un detalle conmigo, contaré con una mesa de sobres el día del evento.</p>
-    </div>
-  </section>
+        <!-- ============ 11. MESA DE REGALOS ============ -->
+        <section class="section reveal" aria-labelledby="regalos-titulo">
+            <p class="eyebrow">Mesa de regalos</p>
+            <h2 class="section-title" id="regalos-titulo">Un detalle <em>opcional</em></h2>
+            <div class="card">
+                <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7c-1.5-3.5-6-4-6-1s3 2 6 1zM12 7c1.5-3.5 6-4 6-1s-3 2-6 1z" /></svg>
+                <p class="lede">Tu cariño y compañía son el mejor regalo. Si deseas tener un detalle conmigo, contaré con una mesa de sobres el día del evento.</p>
+            </div>
+        </section>
 
-  <!-- ============ 12. AGRADECIMIENTO ============ -->
-  <section class="section closing reveal" aria-labelledby="cierre-titulo">
-    <p class="eyebrow">Gracias</p>
-    <h2 class="section-title" id="cierre-titulo">Espero verte <em>ahí</em></h2>
-    <p class="lede">Con todo mi cariño, te espero para celebrar juntos esta noche inolvidable.</p>
-    <p class="closing__script">Carla Nikol</p>
-    <p class="closing__foot">8 de agosto · 2026 · Salón de Eventos Neidy Rossiel</p>
-  </section>
+        <!-- ============ 12. AGRADECIMIENTO ============ -->
+        <section class="section closing reveal" aria-labelledby="cierre-titulo">
+            <p class="eyebrow">Gracias</p>
+            <h2 class="section-title" id="cierre-titulo">Espero verte <em>ahí</em></h2>
+            <p class="lede">Con todo mi cariño, te espero para celebrar juntos esta noche inolvidable.</p>
+            <p class="closing__script">Carla Nikol</p>
+            <p class="closing__foot">8 de agosto · 2026 · Salón de Eventos Neidy Rossiel</p>
+        </section>
 
-</main>
+    </main>
 </div><!-- /.app-frame -->
 
 <!-- Reproductor flotante de playlist -->

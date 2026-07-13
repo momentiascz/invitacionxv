@@ -289,6 +289,73 @@ main{ position:relative; }
 .spotify-embed iframe{
   width:100%; border:0; border-radius:var(--radius-sm); display:block;
 }
+/* ==========================================================================
+   MÚSICA — disco giratorio elegante
+   ========================================================================== */
+.music-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .9rem;
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+}
+
+.music-disc {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, var(--card-bg) 0 28%, var(--ink) 29% 30%, var(--rose-deep) 31% 100%);
+    box-shadow: 0 14px 30px var(--shadow);
+    color: var(--ink);
+    transition: transform .4s var(--ease);
+}
+
+    .music-disc:active {
+        transform: scale(.94);
+    }
+
+.music-disc__ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold-deep);
+    opacity: .55;
+}
+
+.music-disc__icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.music-disc.is-playing {
+    animation: disc-spin 6s linear infinite;
+}
+
+@keyframes disc-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music-card__label {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: .95rem;
+    color: var(--ink-dim);
+}
 
 /* ==========================================================================
    9. GALERÍA
