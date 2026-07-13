@@ -20,23 +20,6 @@
 
 <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-<!-- ============ PANTALLA DE INICIO: SOBRE ============ -->
-<div class="envelope-screen" id="envelopeScreen">
-  <div class="envelope-screen__inner">
-    <button type="button" class="envelope" id="envelopeButton" aria-label="Abrir invitación de mis XV años">
-      <span class="envelope__back"></span>
-      <span class="envelope__letter">
-        <span class="envelope__letter-mark">C</span>
-        <span class="envelope__letter-text">Mis XV años</span>
-      </span>
-      <span class="envelope__pocket"></span>
-      <span class="envelope__flap"></span>
-      <span class="envelope__seal">C</span>
-    </button>
-    <p class="envelope-screen__hint">Toca el sobre para abrir tu invitación</p>
-  </div>
-</div>
-
 <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
 <div class="app-frame">
