@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!name) return;
 
             const guestText = guests === '0' ? 'sin acompañantes' : ('con ' + guests + ' acompañante(s)');
-            const message = '¡Hola! Soy ' + name + ' y confirmo mi asistencia a los XV años de Valentina, ' + guestText + '. ¡Nos vemos ahí! 🎉';
+            const message = '¡Hola! Soy ' + name + ' y confirmo mi asistencia a los XV años de Carla, ' + guestText + '. ¡Nos vemos ahí! 🎉';
             const url = 'https://wa.me/' + CONFIG.whatsappNumber + '?text=' + encodeURIComponent(message);
             window.open(url, '_blank', 'noopener');
         });
