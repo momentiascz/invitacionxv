@@ -10,7 +10,7 @@
    ========================================================================== */
 const CONFIG = {
     eventDate: new Date('2026-08-08T20:00:00-04:00'),
-    whatsappNumber: '59170000000', // formato internacional sin '+' ni espacios
+    whatsappNumber: '59169245784', // formato internacional sin '+' ni espacios
     galleryCount: 18,
     // Pega aquí el ID de tu playlist de Spotify para mostrar el reproductor.
     // Lo encuentras en el enlace para compartir: open.spotify.com/playlist/ESTE_ID
@@ -55,6 +55,54 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+
+
+    /* ==========================================================================
+       HERO — entrada elegante al abrir el sobre + parallax sutil al hacer scroll
+       ========================================================================== */
+    function initHeroEffects() {
+        const hero = document.querySelector('.hero');
+        const photo = document.querySelector('.hero__photo');
+        const caption = document.querySelector('.hero__caption');
+        if (!hero || !photo) return;
+
+        // Entrada escalonada: se activa cuando el sobre termina de abrirse
+        const envelope = document.getElementById('envelopeButton');
+        function reveal() { hero.classList.add('is-revealed'); }
+        if (envelope) {
+            envelope.addEventListener('click', () => setTimeout(reveal, 550), { once: true });
+        } else {
+            reveal();
+        }
+
+        // Parallax: la foto se mueve más lento que el scroll, el texto se desvanece
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        let ticking = false;
+        function update() {
+            const rect = hero.getBoundingClientRect();
+            const heroHeight = rect.height || 1;
+            const progress = Math.min(1, Math.max(0, -rect.top / heroHeight));
+
+            photo.style.backgroundPosition = 'center ' + (50 + progress * 12) + '%';
+            if (caption) {
+                caption.style.opacity = String(1 - progress * 1.15);
+                caption.style.transform = 'translateY(' + (progress * 24) + 'px)';
+            }
+            ticking = false;
+        }
+        function onScroll() {
+            if (!ticking) {
+                requestAnimationFrame(update);
+                ticking = true;
+            }
+        }
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', update);
+    }
+
 
     /* ==========================================================================
        1. BARRA DE PROGRESO DE LECTURA
@@ -317,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
        los demás igual se ejecutan y el contenido de la página nunca se pierde.
        ========================================================================== */
     const modules = [
-        initEnvelope, initProgressBar, initReveal, initCountdown, initPlaylist,
+        initEnvelope, initHeroEffects, initProgressBar, initReveal, initCountdown, initPlaylist,
         initMusicPlayer, initGallery, initRSVP, initPlayerPill, initStickyCta
     ];
     modules.forEach(fn => {
