@@ -10,7 +10,7 @@
    ========================================================================== */
 const CONFIG = {
     eventDate: new Date('2026-08-08T20:00:00-04:00'),
-    whatsappNumber: '59169245784', // formato internacional sin '+' ni espacios
+    whatsappNumber: '59175386366', // formato internacional sin '+' ni espacios
     galleryCount: 18,
     // Pega aquí el ID de tu playlist de Spotify para mostrar el reproductor.
     // Lo encuentras en el enlace para compartir: open.spotify.com/playlist/ESTE_ID
